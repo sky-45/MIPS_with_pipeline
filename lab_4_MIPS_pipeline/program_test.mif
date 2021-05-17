@@ -1,0 +1,31 @@
+-- MIPS Instruction Memory Initialization File
+Depth = 1024;
+Width = 32;
+Address_radix = HEX;
+Data_radix = HEX;
+Content
+Begin
+-- Use NOPS for default instruction memory values
+	[00..3FF]: 00000000; -- nop (add r0,r0,r0)
+-- Place MIPS Instructions here
+-- Note: memory addresses in embedded RAM are in words and not in bytes
+-- i.e. next location is +1 and not +4. But PC increments in +4
+-- INICIALIZACION DE 16 VALORES EN MEMORIA
+-- INICIO DE PROGRAMA
+	00: 20010020;	-- lw $1, 0x20($0) 
+	01: 20020080;	-- lw $2, 0x80($0)	
+	02: 20030000;	-- lw $3, 0x00($0)	
+	03: 20040010;	-- lw $4, 0x10($0)	
+	04: 20050012;	-- lw $5, 0x12($0)	
+	05: 20060022;	-- lw $6, 0x22($0)	
+	06: 20070002;	-- lw $7, 0x02($0)	
+	07: 20080016;	-- lw $8, 0x16($0)	
+	08: 20090069;	-- lw $9, 0x69($0)	
+	09: 00430820;	-- add $1, $2, $3
+	0A: 00A62022;	-- sub $4, $5, $6
+	0B: 01093820;	-- add $7, $8, $9
+	0C: 00272820;	-- add $5, $1, $7
+End;	
+--	0B: 00E80820;	-- add $1, $7, $8
+--	0C: 00214820;	-- add $9, $1, $1
+--	0D: 00435020;	-- add $10, $2, $3

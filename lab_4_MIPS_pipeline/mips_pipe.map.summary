@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Feb 24 11:12:21 2021
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Web Edition
+Revision Name : mips_pipe
+Top-level Entity Name : MIPS_pipe
+Family : Cyclone II
+Total logic elements : 3,889
+    Total combinational functions : 2,774
+    Dedicated logic registers : 1,595
+Total registers : 1595
+Total pins : 199
+Total virtual pins : 0
+Total memory bits : 131,072
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

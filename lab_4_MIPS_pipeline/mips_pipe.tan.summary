@@ -1,0 +1,106 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : 0.472 ns
+Required Time  : 1.000 ns
+Actual Time    : 0.528 ns
+From           : altera_internal_jtag~TMSUTAP
+To             : sld_hub:auto_hub|node_ena[2]~reg0
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : 0.863 ns
+Required Time  : 17.000 ns
+Actual Time    : 16.137 ns
+From           : mem_wb:MEMWB|write_register_wb[3]
+To             : ALU_result_out[31]
+From Clock     : clk_50MHz
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : 0.088 ns
+Required Time  : 2.700 ns
+Actual Time    : 2.612 ns
+From           : altera_internal_jtag~TDO
+To             : altera_reserved_tdo
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : 0.301 ns
+Required Time  : 0.500 ns
+Actual Time    : 0.199 ns
+From           : altera_internal_jtag~TMSUTAP
+To             : sld_hub:auto_hub|hub_mode_reg[0]
+From Clock     : --
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll:CLOCKS|altpll:altpll_component|_clk0'
+Slack          : 18.376 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
+Actual Time    : N/A
+From           : MEMory:MEM|altsyncram:data_memory|altsyncram_mhs3:auto_generated|altsyncram_k1v2:altsyncram1|altsyncram_66f2:altsyncram3|ram_block4a18~porta_address_reg10
+To             : mem_wb:MEMWB|read_data_wb[18]
+From Clock     : pll:CLOCKS|altpll:altpll_component|_clk1
+To Clock       : pll:CLOCKS|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'pll:CLOCKS|altpll:altpll_component|_clk1'
+Slack          : 20.084 ns
+Required Time  : 40.00 MHz ( period = 25.000 ns )
+Actual Time    : N/A
+From           : ex_mem:EXMEM|ALU_Result_mem[11]
+To             : MEMory:MEM|altsyncram:data_memory|altsyncram_mhs3:auto_generated|altsyncram_k1v2:altsyncram1|altsyncram_66f2:altsyncram3|ram_block4a30~porta_address_reg10
+From Clock     : pll:CLOCKS|altpll:altpll_component|_clk0
+To Clock       : pll:CLOCKS|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altera_internal_jtag~TCKUTAP'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 73.61 MHz ( period = 13.586 ns )
+From           : MEMory:MEM|altsyncram:data_memory|altsyncram_mhs3:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[0]
+To             : sld_hub:auto_hub|tdo
+From Clock     : altera_internal_jtag~TCKUTAP
+To Clock       : altera_internal_jtag~TCKUTAP
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll:CLOCKS|altpll:altpll_component|_clk0'
+Slack          : 0.520 ns
+Required Time  : 20.00 MHz ( period = 50.000 ns )
+Actual Time    : N/A
+From           : if_id:IFID|PC_plus_4_id[2]
+To             : id_ex:IDEX|PC_plus_4_ex[2]
+From Clock     : pll:CLOCKS|altpll:altpll_component|_clk0
+To Clock       : pll:CLOCKS|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'pll:CLOCKS|altpll:altpll_component|_clk1'
+Slack          : 0.700 ns
+Required Time  : 40.00 MHz ( period = 25.000 ns )
+Actual Time    : N/A
+From           : IFetch:IFE|PC[6]
+To             : IFetch:IFE|altsyncram:inst_memory|altsyncram_7fq3:auto_generated|altsyncram_pot2:altsyncram1|altsyncram_s5f2:altsyncram3|ram_block4a26~porta_address_reg5
+From Clock     : pll:CLOCKS|altpll:altpll_component|_clk0
+To Clock       : pll:CLOCKS|altpll:altpll_component|_clk1
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

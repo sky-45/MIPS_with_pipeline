@@ -1,0 +1,16 @@
+--  MIPS Data Memory Initialization File
+depth=1024;
+width=32;
+Address_radix = HEX;
+Data_radix = HEX;
+Content
+Begin
+-- default value for memory
+ [00..3FF] : 00000000;
+-- initial values for test program
+-- Note: memory addresses in embedded RAM are in words and not in bytes
+-- i.e. next address location is +1 and not +4
+ 00 : 00000000;
+ 01 : 00000000;
+End;
+

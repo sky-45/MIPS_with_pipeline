@@ -1,0 +1,274 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2010 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II
+# Version 9.1 Build 222 10/21/2009 SJ Full Version
+# Date created = 09:50:58  January 31, 2021
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		mips_pipe_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone II"
+set_global_assignment -name DEVICE EP2C35F672C6
+set_global_assignment -name TOP_LEVEL_ENTITY mips_pipe
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 9.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:50:58  JANUARY 31, 2021"
+set_global_assignment -name LAST_QUARTUS_VERSION 9.1
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name VHDL_FILE ex_mem.vhd
+set_global_assignment -name VHDL_FILE execute.vhd
+set_global_assignment -name VHDL_FILE fu.vhd
+set_global_assignment -name VHDL_FILE hdu.vhd
+set_global_assignment -name VHDL_FILE id_ex.vhd
+set_global_assignment -name VHDL_FILE idecode.vhd
+set_global_assignment -name VHDL_FILE if_id.vhd
+set_global_assignment -name VHDL_FILE ifetch.vhd
+set_global_assignment -name VHDL_FILE mem_wb.vhd
+set_global_assignment -name VHDL_FILE memory.vhd
+set_global_assignment -name VHDL_FILE mips_pipe.vhd
+set_global_assignment -name VHDL_FILE writeback.vhd
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_parameter -name CYCLONEII_SAFE_WRITE RESTRUCTURE
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS "AS INPUT TRI-STATED"
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
+set_location_assignment PIN_H23 -to ALU_result_out[0]
+set_location_assignment PIN_H24 -to ALU_result_out[1]
+set_location_assignment PIN_J23 -to ALU_result_out[2]
+set_location_assignment PIN_J24 -to ALU_result_out[3]
+set_location_assignment PIN_H25 -to ALU_result_out[4]
+set_location_assignment PIN_H26 -to ALU_result_out[5]
+set_location_assignment PIN_H19 -to ALU_result_out[6]
+set_location_assignment PIN_K18 -to ALU_result_out[7]
+set_location_assignment PIN_AE23 -to ALU_result_out[8]
+set_location_assignment PIN_AF23 -to ALU_result_out[9]
+set_location_assignment PIN_AB21 -to ALU_result_out[10]
+set_location_assignment PIN_AC22 -to ALU_result_out[11]
+set_location_assignment PIN_AD22 -to ALU_result_out[12]
+set_location_assignment PIN_AD23 -to ALU_result_out[13]
+set_location_assignment PIN_AD21 -to ALU_result_out[14]
+set_location_assignment PIN_AC21 -to ALU_result_out[15]
+set_location_assignment PIN_AA14 -to ALU_result_out[16]
+set_location_assignment PIN_Y13 -to ALU_result_out[17]
+set_location_assignment PIN_AA13 -to ALU_result_out[18]
+set_location_assignment PIN_AC14 -to ALU_result_out[19]
+set_location_assignment PIN_AD15 -to ALU_result_out[20]
+set_location_assignment PIN_AE15 -to ALU_result_out[21]
+set_location_assignment PIN_AF13 -to ALU_result_out[22]
+set_location_assignment PIN_AE13 -to ALU_result_out[23]
+set_location_assignment PIN_AE12 -to ALU_result_out[24]
+set_location_assignment PIN_AD12 -to ALU_result_out[25]
+set_location_assignment PIN_AE22 -to ALU_result_out[26]
+set_location_assignment PIN_AF22 -to ALU_result_out[27]
+set_location_assignment PIN_W19 -to ALU_result_out[28]
+set_location_assignment PIN_V18 -to ALU_result_out[29]
+set_location_assignment PIN_U18 -to ALU_result_out[30]
+set_location_assignment PIN_U17 -to ALU_result_out[31]
+set_location_assignment PIN_L23 -to Branch_out
+set_location_assignment PIN_N2 -to clk_50MHz
+set_location_assignment PIN_D25 -to Instruction_out[0]
+set_location_assignment PIN_J22 -to Instruction_out[1]
+set_location_assignment PIN_E26 -to Instruction_out[2]
+set_location_assignment PIN_E25 -to Instruction_out[3]
+set_location_assignment PIN_F24 -to Instruction_out[4]
+set_location_assignment PIN_F23 -to Instruction_out[5]
+set_location_assignment PIN_J21 -to Instruction_out[6]
+set_location_assignment PIN_J20 -to Instruction_out[7]
+set_location_assignment PIN_F25 -to Instruction_out[8]
+set_location_assignment PIN_F26 -to Instruction_out[9]
+set_location_assignment PIN_N18 -to Instruction_out[10]
+set_location_assignment PIN_P18 -to Instruction_out[11]
+set_location_assignment PIN_G23 -to Instruction_out[12]
+set_location_assignment PIN_G24 -to Instruction_out[13]
+set_location_assignment PIN_K22 -to Instruction_out[14]
+set_location_assignment PIN_G25 -to Instruction_out[15]
+set_location_assignment PIN_AF10 -to Instruction_out[16]
+set_location_assignment PIN_AB12 -to Instruction_out[17]
+set_location_assignment PIN_AC12 -to Instruction_out[18]
+set_location_assignment PIN_AD11 -to Instruction_out[19]
+set_location_assignment PIN_AE11 -to Instruction_out[20]
+set_location_assignment PIN_V14 -to Instruction_out[21]
+set_location_assignment PIN_V13 -to Instruction_out[22]
+set_location_assignment PIN_V20 -to Instruction_out[23]
+set_location_assignment PIN_V21 -to Instruction_out[24]
+set_location_assignment PIN_W21 -to Instruction_out[25]
+set_location_assignment PIN_Y22 -to Instruction_out[26]
+set_location_assignment PIN_AA24 -to Instruction_out[27]
+set_location_assignment PIN_AA23 -to Instruction_out[28]
+set_location_assignment PIN_AB24 -to Instruction_out[29]
+set_location_assignment PIN_AB23 -to Instruction_out[30]
+set_location_assignment PIN_V22 -to Instruction_out[31]
+set_location_assignment PIN_L24 -to Memwrite_out
+set_location_assignment PIN_W23 -to Overflow_out
+set_location_assignment PIN_K19 -to PC[0]
+set_location_assignment PIN_K21 -to PC[1]
+set_location_assignment PIN_K23 -to PC[2]
+set_location_assignment PIN_K24 -to PC[3]
+set_location_assignment PIN_L21 -to PC[4]
+set_location_assignment PIN_L20 -to PC[5]
+set_location_assignment PIN_J25 -to PC[6]
+set_location_assignment PIN_J26 -to PC[7]
+set_location_assignment PIN_AC25 -to PC[8]
+set_location_assignment PIN_AC26 -to PC[9]
+set_location_assignment PIN_AB26 -to PC[10]
+set_location_assignment PIN_AB25 -to PC[11]
+set_location_assignment PIN_Y24 -to PC[12]
+set_location_assignment PIN_Y23 -to PC[13]
+set_location_assignment PIN_AA25 -to PC[14]
+set_location_assignment PIN_AA26 -to PC[15]
+set_location_assignment PIN_Y26 -to PC[16]
+set_location_assignment PIN_Y25 -to PC[17]
+set_location_assignment PIN_U22 -to PC[18]
+set_location_assignment PIN_W24 -to PC[19]
+set_location_assignment PIN_U9 -to PC[20]
+set_location_assignment PIN_U1 -to PC[21]
+set_location_assignment PIN_U2 -to PC[22]
+set_location_assignment PIN_T4 -to PC[23]
+set_location_assignment PIN_R7 -to PC[24]
+set_location_assignment PIN_R6 -to PC[25]
+set_location_assignment PIN_T3 -to PC[26]
+set_location_assignment PIN_T2 -to PC[27]
+set_location_assignment PIN_P6 -to PC[28]
+set_location_assignment PIN_P7 -to PC[29]
+set_location_assignment PIN_T9 -to PC[30]
+set_location_assignment PIN_R5 -to PC[31]
+set_location_assignment PIN_K25 -to read_data_1_out[0]
+set_location_assignment PIN_K26 -to read_data_1_out[1]
+set_location_assignment PIN_M22 -to read_data_1_out[2]
+set_location_assignment PIN_M23 -to read_data_1_out[3]
+set_location_assignment PIN_M19 -to read_data_1_out[4]
+set_location_assignment PIN_M20 -to read_data_1_out[5]
+set_location_assignment PIN_N20 -to read_data_1_out[6]
+set_location_assignment PIN_M21 -to read_data_1_out[7]
+set_location_assignment PIN_M24 -to read_data_1_out[8]
+set_location_assignment PIN_M25 -to read_data_1_out[9]
+set_location_assignment PIN_N24 -to read_data_1_out[10]
+set_location_assignment PIN_P24 -to read_data_1_out[11]
+set_location_assignment PIN_R25 -to read_data_1_out[12]
+set_location_assignment PIN_R24 -to read_data_1_out[13]
+set_location_assignment PIN_R4 -to read_data_1_out[14]
+set_location_assignment PIN_R3 -to read_data_1_out[15]
+set_location_assignment PIN_R2 -to read_data_1_out[16]
+set_location_assignment PIN_P4 -to read_data_1_out[17]
+set_location_assignment PIN_P3 -to read_data_1_out[18]
+set_location_assignment PIN_M2 -to read_data_1_out[19]
+set_location_assignment PIN_M3 -to read_data_1_out[20]
+set_location_assignment PIN_M5 -to read_data_1_out[21]
+set_location_assignment PIN_M4 -to read_data_1_out[22]
+set_location_assignment PIN_L3 -to read_data_1_out[23]
+set_location_assignment PIN_L2 -to read_data_1_out[24]
+set_location_assignment PIN_L9 -to read_data_1_out[25]
+set_location_assignment PIN_L6 -to read_data_1_out[26]
+set_location_assignment PIN_L7 -to read_data_1_out[27]
+set_location_assignment PIN_P9 -to read_data_1_out[28]
+set_location_assignment PIN_N9 -to read_data_1_out[29]
+set_location_assignment PIN_AA20 -to read_data_1_out[30]
+set_location_assignment PIN_Y18 -to read_data_1_out[31]
+set_location_assignment PIN_R20 -to read_data_2_out[0]
+set_location_assignment PIN_T22 -to read_data_2_out[1]
+set_location_assignment PIN_T23 -to read_data_2_out[2]
+set_location_assignment PIN_T24 -to read_data_2_out[3]
+set_location_assignment PIN_T25 -to read_data_2_out[4]
+set_location_assignment PIN_T18 -to read_data_2_out[5]
+set_location_assignment PIN_T21 -to read_data_2_out[6]
+set_location_assignment PIN_T20 -to read_data_2_out[7]
+set_location_assignment PIN_U26 -to read_data_2_out[8]
+set_location_assignment PIN_U25 -to read_data_2_out[9]
+set_location_assignment PIN_U23 -to read_data_2_out[10]
+set_location_assignment PIN_U24 -to read_data_2_out[11]
+set_location_assignment PIN_R19 -to read_data_2_out[12]
+set_location_assignment PIN_T19 -to read_data_2_out[13]
+set_location_assignment PIN_AE4 -to read_data_2_out[14]
+set_location_assignment PIN_AF4 -to read_data_2_out[15]
+set_location_assignment PIN_AC5 -to read_data_2_out[16]
+set_location_assignment PIN_AC6 -to read_data_2_out[17]
+set_location_assignment PIN_AD4 -to read_data_2_out[18]
+set_location_assignment PIN_AD5 -to read_data_2_out[19]
+set_location_assignment PIN_AE5 -to read_data_2_out[20]
+set_location_assignment PIN_AF5 -to read_data_2_out[21]
+set_location_assignment PIN_AD6 -to read_data_2_out[22]
+set_location_assignment PIN_AD7 -to read_data_2_out[23]
+set_location_assignment PIN_V10 -to read_data_2_out[24]
+set_location_assignment PIN_V9 -to read_data_2_out[25]
+set_location_assignment PIN_AC7 -to read_data_2_out[26]
+set_location_assignment PIN_W8 -to read_data_2_out[27]
+set_location_assignment PIN_W10 -to read_data_2_out[28]
+set_location_assignment PIN_Y10 -to read_data_2_out[29]
+set_location_assignment PIN_AB8 -to read_data_2_out[30]
+set_location_assignment PIN_AC8 -to read_data_2_out[31]
+set_location_assignment PIN_U20 -to read_data_out[0]
+set_location_assignment PIN_U21 -to read_data_out[1]
+set_location_assignment PIN_V26 -to read_data_out[2]
+set_location_assignment PIN_V25 -to read_data_out[3]
+set_location_assignment PIN_V24 -to read_data_out[4]
+set_location_assignment PIN_V23 -to read_data_out[5]
+set_location_assignment PIN_W25 -to read_data_out[6]
+set_location_assignment PIN_AC18 -to read_data_out[7]
+set_location_assignment PIN_AB18 -to read_data_out[8]
+set_location_assignment PIN_AE19 -to read_data_out[9]
+set_location_assignment PIN_AF19 -to read_data_out[10]
+set_location_assignment PIN_AE18 -to read_data_out[11]
+set_location_assignment PIN_AF18 -to read_data_out[12]
+set_location_assignment PIN_Y16 -to read_data_out[13]
+set_location_assignment PIN_AA16 -to read_data_out[14]
+set_location_assignment PIN_AD17 -to read_data_out[15]
+set_location_assignment PIN_AC17 -to read_data_out[16]
+set_location_assignment PIN_AE17 -to read_data_out[17]
+set_location_assignment PIN_AF17 -to read_data_out[18]
+set_location_assignment PIN_W16 -to read_data_out[19]
+set_location_assignment PIN_W15 -to read_data_out[20]
+set_location_assignment PIN_AC16 -to read_data_out[21]
+set_location_assignment PIN_AD16 -to read_data_out[22]
+set_location_assignment PIN_AE16 -to read_data_out[23]
+set_location_assignment PIN_AC15 -to read_data_out[24]
+set_location_assignment PIN_AB15 -to read_data_out[25]
+set_location_assignment PIN_AA15 -to read_data_out[26]
+set_location_assignment PIN_Y15 -to read_data_out[27]
+set_location_assignment PIN_Y14 -to read_data_out[28]
+set_location_assignment PIN_T6 -to read_data_out[29]
+set_location_assignment PIN_V4 -to read_data_out[30]
+set_location_assignment PIN_V3 -to read_data_out[31]
+set_location_assignment PIN_L25 -to Regwrite_out
+set_location_assignment PIN_G26 -to reset
+set_location_assignment PIN_L19 -to Zero_out
+set_global_assignment -name TSU_REQUIREMENT "1 ns"
+set_global_assignment -name TCO_REQUIREMENT "17 ns"
+set_global_assignment -name TPD_REQUIREMENT "2.7 ns"
+set_global_assignment -name TH_REQUIREMENT "0.5 ns"
+set_global_assignment -name VECTOR_WAVEFORM_FILE mips_pipe.vwf
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS ON
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

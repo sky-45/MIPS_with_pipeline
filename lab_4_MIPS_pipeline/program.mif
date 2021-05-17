@@ -1,0 +1,68 @@
+-- MIPS Instruction Memory Initialization File
+Depth = 1024;
+Width = 32;
+Address_radix = HEX;
+Data_radix = HEX;
+Content
+Begin
+-- Use NOPS for default instruction memory values
+	[00..3FF]: 00000000; -- nop (add r0,r0,r0)
+-- Place MIPS Instructions here
+-- Note: memory addresses in embedded RAM are in words and not in bytes
+-- i.e. next location is +1 and not +4. But PC increments in +4
+-- INICIALIZACION DE 16 VALORES EN MEMORIA
+	00: 2008ABCD;	--	addi $8, $0, 0xABCD	-> FFFFABCD
+	01: AC080080;	--  sw $8, 0x0080 ($0)		
+	02: 2008D00D;	--  addi $8, $0, 0xABCD -> FFFFD00D
+	03: AC080084;	--  sw $8, 0x0084 ($0)	
+	04: 20080FFF;	--  addi $8, $0, 0x0FFF -> 00000FFF
+	05: AC080088;	--  sw $8, 0x0088 ($0)	
+	06: 2008FFFF;	--  addi $8, $0, 0xFFFF -> FFFFFFFF
+	07: AC08008C;	--  sw $8, 0x008C ($0)
+	08: 20082223;	--  addi $8, $0, 0x2223 -> 00002223
+	09: AC080090;	--  sw $8, 0x0090 ($0)
+	0A: 20080000;	--  addi $8, $0, 0x0000 -> 00000000
+	0B: AC080094;	--  sw $8, 0x0094 ($0)
+	0C: 2008EE00;	--  addi $8, $0, 0xEE00 -> FFFFEE00
+	0D: AC080098;	--  sw $8, 0x0098 ($0)
+	0E: 2008F00F;	--  addi $8, $0, 0xF00F -> FFFFF00F
+	0F: AC08009C;	--  sw $8, 0x009C ($0)
+	10: 2008CCCC;	--  addi $8, $0, 0xCCCC -> FFFFCCCC
+	11: AC0800A0;	--  sw $8, 0x00A0 ($0)
+	12: 20086666;	--  addi $8, $0, 0x6666 -> 00006666
+	13: AC0800A4;	--  sw $8, 0x00A4 ($0)
+	14: 20089999;	--  addi $8, $0, 0x9999 -> FFFF9999
+	15: AC0800A8;	--  sw $8, 0x00A8 ($0)
+	16: 2008A000;	--  addi $8, $0, 0xA000 -> FFFFA000
+	17: AC0800AC;	--  sw $8, 0x00AC ($0)
+	18: 20080420;	--  addi $8, $0, 0x0420 -> 00000420
+	19: AC0800B0;	--  sw $8, 0x00B0 ($0)
+	1A: 20084321;	--  addi $8, $0, 0x4321 -> 00004321
+	1B: AC0800B4;	--  sw $8, 0x00B4 ($0)
+	1C: 2008BEFB;	--  addi $8, $0, 0xBEFB -> FFFFBEFB
+	1D: AC0800B8;	--  sw $8, 0x00B8 ($0)
+	1E: 2008EAEA;	--  addi $8, $0, 0xEAEA -> FFFFEAEA
+	1F: AC0800BC;	--  sw $8, 0x00BC ($0)
+-- INICIO DE PROGRAMA
+	20: 20010020;	--  addi $1, $0, 0x0020				; valor inicial dato mem
+	21: 20020080;	--  addi $2, $0, 0x0080				; valor inicial reg mem
+	22: 20030000;	--  addi $3, $0, 0x0000				; contador
+	23: 20040010;	--  addi $4, $0, 0x0010				; contador valor maximo => 0x10 = 0b100000=16
+	24: 00232820;	--  add $5, $1, $3					; val inicial+contador ; registro actual		
+	25:	00A53020;	--  add $6, $5, $5
+	26:	00C65020;	--  add $A, $6, $6					; este valor va a lw = 4*$5
+	27: 8D4B0000;	--  lw  $B, 0($A) 					; carga valor de la memoria		
+	28: 01606027;	--  nor $C, $B, $0					; niega $B
+	29: 218D0001;	--  addi $D, $C, 0x1		    	; d=not(B)+1
+	2A: 00437020;	--  add  $E, $2, $3 				; val inicial reg + contador
+	2B:	01CE7820;	--  add  $F, $E, $E
+	2C:	01EF8020;	--  add  $G, $F, $F 				; $G= 4*$E ,adress que va a sw
+	2D: AE0D0000;	--  sw  $D, 0($E)					; guarda el valor en el reg indicado
+	2E: 20630001;	--  addi $3, $3, 0x1 				; el contador aumenta su valor
+	2F: 10640003;	--  beq $3, $4, 0x3 				;  pc*=pc+4=[33]
+	30: 00000020;	--  add $0, $0, $0   				; instruccion que se hace si o si en caso de branch
+	31: 08000024;	--  j  0x24							; jump to 0x24
+	32: 00000020;	--  add $0, $0, $0
+	33: 08000033;	--  j  0x32							; jump to 0x32
+	34: 00000020;	--  add $0, $0, $0
+End;
